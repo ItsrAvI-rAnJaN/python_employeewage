@@ -7,10 +7,14 @@ class Employee:
         is_full_time = 2
         emp_rate_per_hrs = 20
         num_of_wrkng_days = 20
+        max_hrs_in_mnth = 100
         emp_hrs = 0
         total_emp_wage = 0
+        total_emp_hrs = 0
+        total_wrkng_days = 0
 
-        for day in range(num_of_wrkng_days):
+        while (total_wrkng_days < num_of_wrkng_days) and (total_emp_hrs < max_hrs_in_mnth):
+            total_wrkng_days += 1
             emp_check = random.randrange(0, 3)
             if emp_check == is_full_time:
                 # print("Employee is worinking Full TIme")
@@ -22,9 +26,11 @@ class Employee:
                 # print("Employee is Absent")
                 emp_hrs = 0
 
+            total_emp_hrs += emp_hrs
             emp_wage = emp_hrs*emp_rate_per_hrs
             total_emp_wage += emp_wage
-
+        print("Total Working Days : ", total_wrkng_days)
+        print("Total Working Hours : ", total_emp_hrs)
         print("Total Employee Wage of a Month :", total_emp_wage)
 
 
