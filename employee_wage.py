@@ -1,8 +1,15 @@
 import random
 
-
 class Employee:
+    
+    """
+    
+    """
     def emp_mnth_wage(self):
+        """
+
+        """
+    
         is_part_time = 1
         is_full_time = 2
         emp_rate_per_hrs = 20
@@ -17,7 +24,7 @@ class Employee:
             total_wrkng_days += 1
             emp_check = random.randrange(0, 3)
             if emp_check == is_full_time:
-                # print("Employee is worinking Full TIme")
+                # print("Employee is workining Full TIme")
                 emp_hrs = 8
             elif emp_check == is_part_time:
                 # print("Employee is working Part time")
